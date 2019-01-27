@@ -1,0 +1,72 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+</ion-header>
+
+<!-- style='border: solid 1px black;' -->
+<ion-content  class='website-body vertical-align-content green-background'  text-center >
+
+
+    <ion-grid   color='primary'>
+      <ion-row style='text-align: center'>
+        <ion-col>
+        </ion-col>
+          
+      </ion-row>
+      <ion-row>
+        <ion-col col-2>
+
+        </ion-col>
+        <ion-col col-8 style='margin:0 auto; text-align: center' >  
+          <h1 no-padding no-margin style='color:white'>
+            ZABS Merchant Portal
+          </h1>
+          <div style='height:100px;width:100%'>
+
+          </div>
+
+          <ion-card  no-padding no-margin color='primary' style='width:100%; '
+          class=' vertical-align-content'>
+         
+       
+                    <ion-item>
+                      <ion-label >
+                        Merchant Email
+                      </ion-label>
+    
+                      <ion-input type='email' name='emailfield' [(ngModel)]='email' ></ion-input>
+                    </ion-item>
+    
+                    
+                    <ion-item>
+                      <ion-label >
+                        Password
+                      </ion-label>
+    
+                      <ion-input type='password' name='passwordfield' [(ngModel)]='password'></ion-input>
+                    </ion-item>
+           
+                  <ion-item>
+                    <button ion-button full (click)='showHomePage()' > Login</button>
+                  </ion-item>
+    
+
+         
+
+
+          </ion-card>
+        </ion-col>
+
+        <ion-col col-2></ion-col>
+   
+      </ion-row>
+
+    </ion-grid>
+
+</ion-content>

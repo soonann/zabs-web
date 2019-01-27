@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+      Merchant Profile
+      </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class='website-body' >
+ 
+
+<form #merchantForm='ngForm' name='merchantForm' >
+
+
+     
+   <ion-item style='text-align: center'>
+          <img [src]="merchant.logo" 
+            style="width:200px;height:200px;margin:0 auto;line-height:250px;background-color:#e8ebef;text-align:center;"/>
+              
+           
+  </ion-item> 
+
+  <ion-item  >
+    <ion-label stacked>
+      Merchant Name
+    </ion-label>
+    <ion-input type="text" placeholder=""  name='merchantName' [(ngModel)]="merchant.name"  ></ion-input>
+  </ion-item>
+
+
+  
+  <ion-item >
+      <ion-label stacked>
+        Merchant Website Url
+      </ion-label>
+      <ion-input type="text" placeholder=""  name='merchantWebsite' [(ngModel)]="merchant.websiteUrl"  ></ion-input>
+    </ion-item>
+
+
+    <ion-item >
+        <ion-label stacked>
+          Branches
+        </ion-label>
+     
+        <ion-input type="text" placeholder=""  name='merchantBranch' [(ngModel)]="merchant.branch"  ></ion-input>
+        <!-- <button item-end ion-button icon-only clear >
+          <ion-icon name='add-circle'>
+          </ion-icon>
+        </button> -->
+ 
+    </ion-item>
+
+    <ion-item >
+        <ion-label stacked>
+          Merchant API Key
+        </ion-label>
+        <ion-input type="{{merchantIdState}}"  name='merchantwebsite' disabled [(ngModel)]="merchant.key"  ></ion-input>
+        
+        <button item-end ion-button clear (click)='toggleId()'>
+          {{merchantIdButtonText}}
+        </button>
+
+    </ion-item>
+
+      <ion-item>
+          <button ion-button color="positive"  block>
+              Save
+            </button>
+      </ion-item>
+
+</form>
+<!-- <ion-item *ngFor="let att of anArray; let idx = index">
+    <ion-label color="primary">{{att.label}}{{idx+1}}</ion-label>
+    <ion-input type="text"  text-right  [(ngModel)]="anArray[idx].value"></ion-input>
+</ion-item>
+<button ion-button   (click)="Add()">Add More</button>
+<button ion-button full  (click)="goTo()" >let's go</button>
+
+<ion-card *ngIf="data">
+<ion-item *ngFor="let att of anArray;">
+  <div class="card-title">{{att.value}}</div>
+</ion-item>
+</ion-card> -->
+  
+</ion-content>
+
+
+
