@@ -9,7 +9,7 @@
             </ion-col>
             <ion-col col-8 >
                 <ion-avatar class='zabs-center' menuClose  >
-                    <img src="assets/img/profile.png" class='zabs-nav-sidemenu-avatar zabs-center'/>
+                    <img [src]='merchant.logo'  style='width: 100px;height:100px;' class='zabs-nav-sidemenu-avatar zabs-center'/>
                 </ion-avatar>
             </ion-col>
             <ion-col col-2>
@@ -18,7 +18,7 @@
           </ion-row>
           <ion-row>
             <h5 class='zabs-center zabs-profile-name-padding' color='white' ion-text>
-              <!-- {{user}} -->
+             {{merchant.name}}
             </h5>
           </ion-row>
         </ion-grid>

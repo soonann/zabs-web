@@ -294,22 +294,7 @@ export class ReceiptFirebaseProvider {
   }
 
  
-  addReceiptByPath(base64Image:string, key ){
-      
-      var ref = this.store.storage.ref();
-      var photoRef = ref.child('/receipt_images/'+ this.user.uid +'/' + key  );
-      let img  = base64Image.split(',')[1];
-      return photoRef.putString(img, 'base64', { contentType: 'image/jpeg' });
-    
-  }
-
-
-  getReceiptUrlByPath(key:string){
-    var ref = firebase.storage().ref();
-    var photoRef = ref.child('/receipt_images/' + this.user.uid + "/"+key);
-    return photoRef.getDownloadURL();
-  }
-
+  
 
   // getDownloadUrl(imageUrl: string) {
   

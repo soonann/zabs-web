@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "zabs-fb-dev",
+    "zabs": "zabs-fb-dev"
+  }
+}

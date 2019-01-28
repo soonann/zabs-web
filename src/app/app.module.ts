@@ -8,7 +8,7 @@ import { LoginPage } from './../pages/login/login';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule, DeepLinkConfig, List } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, DeepLinkConfig, List, NavController } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 
@@ -69,6 +69,7 @@ const config = {
     MerchantFirebaseProvider,
     NgForm,
     AuthService,
+  
     
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

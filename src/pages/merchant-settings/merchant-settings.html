@@ -12,22 +12,30 @@
 <ion-content class='website-body' >
  
 
-<form #merchantForm='ngForm' name='merchantForm' >
+<form name='merchant'  #merchantForm='ngForm'  >
 
 
      
    <ion-item style='text-align: center'>
-          <img [src]="merchant.logo" 
-            style="width:200px;height:200px;margin:0 auto;line-height:250px;background-color:#e8ebef;text-align:center;"/>
+  
+          <img [src]="merchant.logo"  
+            style="width:200px;height:200px;margin:0 auto;line-height:250px;text-align:center; "/>
               
            
   </ion-item> 
+
+  <ion-item>
+    <ion-label stacked>
+      Company Logo
+    </ion-label>
+    <ion-input type='file' accept='image/*' (change)="changeListener($event)"  name='imgPath' [(ngModel)]='file'   > </ion-input>
+  </ion-item>
 
   <ion-item  >
     <ion-label stacked>
       Merchant Name
     </ion-label>
-    <ion-input type="text" placeholder=""  name='merchantName' [(ngModel)]="merchant.name"  ></ion-input>
+    <ion-input type="text" placeholder=""  name='merchantName' required [(ngModel)]="merchant.name"  ></ion-input>
   </ion-item>
 
 
@@ -42,10 +50,10 @@
 
     <ion-item >
         <ion-label stacked>
-          Branches
+          Branch Name
         </ion-label>
      
-        <ion-input type="text" placeholder=""  name='merchantBranch' [(ngModel)]="merchant.branch"  ></ion-input>
+        <ion-input type="text" placeholder=""  required name='merchantBranch' [(ngModel)]="merchant.branch"  ></ion-input>
         <!-- <button item-end ion-button icon-only clear >
           <ion-icon name='add-circle'>
           </ion-icon>
@@ -65,13 +73,14 @@
 
     </ion-item>
 
-      <ion-item>
-          <button ion-button color="positive"  block>
-              Save
-            </button>
-      </ion-item>
-
+  
 </form>
+<ion-item>
+    <button ion-button color="positive" (click)='saveDetails(merchantForm)' block>
+        Save
+      </button>
+</ion-item>
+
 <!-- <ion-item *ngFor="let att of anArray; let idx = index">
     <ion-label color="primary">{{att.label}}{{idx+1}}</ion-label>
     <ion-input type="text"  text-right  [(ngModel)]="anArray[idx].value"></ion-input>
