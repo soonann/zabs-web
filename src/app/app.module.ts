@@ -30,7 +30,7 @@ const config = {
   authDomain: "zabs-fb-dev.firebaseapp.com",
   databaseURL: "https://zabs-fb-dev.firebaseio.com",
   projectId: "zabs-fb-dev",
-  storageBucket: "zabs-fb-dev",
+  storageBucket: "zabs-fb-dev.appspot.com",
   messagingSenderId: "113696640369"
 };
 

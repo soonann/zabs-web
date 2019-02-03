@@ -69,7 +69,7 @@ export class MyApp {
             this.merchant = x;
             this.merchant.key = x
             if (this.merchant.logo == '' ){
-              this.merchant.logo = 'https://firebasestorage.googleapis.com/v0/b/zabs-fb-dev/o/company_logo%2Fbiz-placeholder.png?alt=media&token=1543d0a2-051a-4c56-a5d4-468f1e7a1b9b'
+              this.merchant.logo = 'https://firebasestorage.googleapis.com/v0/b/zabs-fb-dev.appspot.com/o/company_logo%2Fbiz-placeholder.png?alt=media&token=3ce8c73f-0ad4-40e6-817e-46483adb0063'
             }
           })
           this.user = x.email;
